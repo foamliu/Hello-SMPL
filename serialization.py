@@ -51,7 +51,7 @@ def save_model(model, fname):
         trainer_dict['bs_style'] = model.bs_style
     else:
         trainer_dict['bs_style'] = 'lbs'
-    pickle.dump(trainer_dict, open(fname, 'w'), -1)
+    pickle.dump(trainer_dict, open(fname, 'wb'), -1)
 
 
 def backwards_compatibility_replacements(dd):
@@ -79,7 +79,7 @@ def backwards_compatibility_replacements(dd):
 
 def ready_arguments(fname_or_dict):
     if not isinstance(fname_or_dict, dict):
-        dd = pickle.load(open(fname_or_dict))
+        dd = pickle.load(open(fname_or_dict, 'rb'))
     else:
         dd = fname_or_dict
 
