@@ -42,7 +42,7 @@ the hello world script now by typing the following:
 
 import numpy as np
 
-from serialization import load_model
+from ..serialization import load_model
 
 ## Load SMPL model (here we load the female model)
 ## Make sure path is correct

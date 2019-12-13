@@ -52,7 +52,7 @@ from opendr.camera import ProjectPoints
 from opendr.lighting import LambertianPointLight
 from opendr.renderer import ColoredRenderer
 
-from serialization import load_model
+from ..serialization import load_model
 
 ## Load SMPL model (here we load the female model)
 m = load_model('models/basicModel_f_lbs_10_207_0_v1.0.0.pkl')
