@@ -52,6 +52,9 @@ m = load_model('models/basicModel_f_lbs_10_207_0_v1.0.0.pkl')
 m.pose[:] = np.random.rand(m.pose.size) * .2
 m.betas[:] = np.random.rand(m.betas.size) * .03
 
+print('m.pose.size: ' + str(m.pose.size))
+print('m.betas.size: ' + str(m.betas.size))
+
 ## Write to an .obj file
 outmesh_path = './hello_smpl.obj'
 with open(outmesh_path, 'w') as fp:
